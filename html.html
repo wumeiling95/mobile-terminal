@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isOdd(num) {
+        return num %2 ==1;
+    }
+    function isEven(num) {
+        return num %2 ==0;
+    }
+    function isSane(num) {
+        return isEven(num)||isOdd(num);
+    }
+    var values =[7,4,'13',-9,Infinity];
+    values.map(isSane);
+</script>
+</body>
+</html>
