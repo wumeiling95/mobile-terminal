@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+    <script src="fastclick.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #div1{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        $(document).on('pageinit',function () {
+            FastClick.attach(document.body);
+            $('#div1').on('tap',function () {
+                console.log('div1');
+            });
+            $('#div2').on('tap',function () {
+                console.log('div2');
+//                $(this).hide();
+            })
+        })
+
+        //原生和非原生
+    </script>
+</body>
+</html>

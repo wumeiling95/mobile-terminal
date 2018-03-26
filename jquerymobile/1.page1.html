@@ -8,12 +8,40 @@
     <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
 </head>
 <body>
-<div data-role="page">
-    <div data-role="header">头部区域</div>
-    <div role="main" class="ui-content">中间区域</div>
+<div data-role="page" data-theme="a">
+    <div data-role="header">
+        <a href="#" data-role="button">首页</a>
+        <h1>欢迎来到我的主页</h1>
+        <a href="#" data-role="button">搜索</a>
+    </div>
+    <div role="main" class="ui-content">
+        <a href="#">跳转</a>
+        中间区域
+        <div data-role="content">
+            <div data-role="controlgroup" data-type="horizontal">
+                <p>水平分组：</p>
+                <a href="#" data-role="button">按钮 1</a>
+                <a href="#" data-role="button">按钮 2</a>
+                <a href="#" data-role="button">按钮 3</a>
+            </div><br>
+
+            <div data-role="controlgroup" data-type="vertical">
+                <p>垂直分组（默认）：</p>
+                <a href="#" data-role="button">按钮 1</a>
+                <a href="#" data-role="button">按钮 2</a>
+                <a href="#" data-role="button">按钮 3</a>
+            </div>
+        </div>
+    </div>
     <div data-role="footer">尾部区域</div>
 </div>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="jquery.mobile-1.4.5.min.js"></script>
+<script>
+    $(document).on("pageinit","#pageone",function(){
+        //点击事件  click比tab慢300ms
+
+    });
+</script>
 </body>
 </html>
